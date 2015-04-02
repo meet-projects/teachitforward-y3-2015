@@ -30,7 +30,7 @@
       <ul class="nav navbar-nav">
         <li><a href="#sec1">What is teach it forward</a></li>
         <li><a href="#sec2">About Us</a></li>
-        <!-- <li><a href="#sec3">Contact Us</a></li> -->
+        <li><a href="#sec3">Contact Us</a></li>
       </ul>
     </div>
    </div>
@@ -75,14 +75,13 @@
   </div>
 </div>
 </div>
-<!--
+
 <div class="featurette" id="sec3">
 <center>
 <h1>Contact Us</h1>
 asdfasdf<br>asasdf
 </center>
 </div>
--->
 
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
