@@ -110,13 +110,13 @@
                     <li <?php if($passData['Name']=='home') echo 'class="active"'; ?>>
                         <a href="<?php echo base_url(); ?>index.php/home"><i class="fa fa-fw fa-dashboard"></i> Home</a>
                     </li>
-                    <li>
+                    <li <?php if($passData['Name']=='profile') echo 'class="active"'; ?>>
                         <a href="<?php echo base_url(); ?>index.php/profile"><i class="fa fa-fw fa-user"></i> Profile</a>
                     </li>
-                    <li>
+                    <li <?php if($passData['Name']=='subjects') echo 'class="active"'; ?>>
                         <a href="<?php echo base_url(); ?>index.php/subjects"><i class="fa fa-fw fa-table"></i> Subjects</a>
                     </li>
-                    <li>
+                    <li <?php if($passData['Name']=='chat') echo 'class="active"'; ?>>
                         <a href="<?php echo base_url(); ?>index.php/chat"><i class="fa fa-fw fa-wechat"></i> Chat</a>
                     </li>
                 </ul>
