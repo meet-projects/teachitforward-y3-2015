@@ -1,0 +1,21 @@
+*****************************************************************
+Hebrew Translation updated for CodeIgniter 2.1.2
+*									By: Dima Ahmedov
+*	Email: dima1236@gmail.com | support@ssdvm.net
+							Last Updated: 29/08/2012
+****************************************************************
+Original Hebrew Translation For CodeIgniter 1.7.2
+*									By: Udi Mosayev
+*	Email: udi.mosayev@gmail.com | facebook.com/udiudi | twitter.com/udiudi
+*							Last Updated: 23/10/2009
+*****************************************************************
+
+INSTALL
+```````````````````````````````````````````````````````````````````````````
+	1. Extract the ZIP file to any folder you want.
+	2. Copy 'hebrew' folder you just extracted to system/language folder inside you CI folder.
+	3. in application/config/config.php set $config['language'] to hebrew like this:
+		$config['language']	= "hebrew";
+	4. This is it!
+
+
