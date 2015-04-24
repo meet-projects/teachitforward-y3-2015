@@ -171,4 +171,17 @@ footer {
   padding: 100px 0;
 }
 
+.bio-img {
+  -webkit-filter: grayscale(1);
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+  width:80px;
+  height:80px;
+}
+.bio-active {
+  width:80px;
+  height:80px;
+}
+
 /* -- end custom css for Bootstrap 3.x --*/
