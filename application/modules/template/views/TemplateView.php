@@ -23,6 +23,7 @@
 
     <!-- Custom CSS -->
     <link href="<?php echo base_url(); ?>css/sb-admin.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>css/bootstrap-select.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
     <link href="<?php echo base_url(); ?>css/plugins/morris.css" rel="stylesheet">
@@ -42,6 +43,12 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>js/bootstrap-select.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('.selectpicker').selectpicker();
+	});
+	</script>
 
 </head>
 
@@ -55,7 +62,20 @@
       </div>
       <div class="modal-body">
         Subjects you can help at :<br>
-		<input type="text" class="form-control" /><br>
+		<select class="selectpicker" multiple data-live-search="true" data-size="6">
+			<optgroup label="Obligatory">
+			  <option value="math3">Math (3 points)</option>
+			  <option value="math4">Math (4 points)</option>
+			  <option value="math5">Math (5 points)</option>
+			  <option value="english">English</option>
+			  <option value="hebrew">Hebrew</option>
+			</optgroup>
+			<optgroup label="Major">
+			  <option value="physics">Physics</option>
+			  <option value="chemistry">Chemistry</option>
+			  <option value="cs">Computer Science</option>
+			</optgroup>
+		</select><br>
         Subjects you need help at :<br>
 		<input type="text" class="form-control" /><br>
       </div>
