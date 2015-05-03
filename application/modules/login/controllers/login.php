@@ -30,7 +30,10 @@ class Login extends MX_Controller {
 	
 	// Store user information and send to home page
 	public function doLogin() {
+		$this->load->model("login_model");
 		if ($this->user) {
+			$profile = $this->facebook->api('/me/');
+			$this->login_model->registerInDB($profile);
 			$this->session->set_userdata("Logged_in", true);
 			redirect(site_url('home'), 'refresh');
 			return;

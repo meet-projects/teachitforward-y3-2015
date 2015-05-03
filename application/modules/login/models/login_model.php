@@ -17,5 +17,20 @@ class Login_model extends CI_Model {
         // Call the Model constructor
         parent::__construct();
     }
-
+	function registerInDB($user) {
+		echo $user['id'];
+		$this->db->select("COUNT(`first`) as c")->from("users")->where("id", $user['id']);
+		$result = $this->db->get()->result();
+		if($result[0]->c==0) {
+			$data=array(
+				"id" => $user['id'],
+				"first" => $user['first_name'],
+				"last" => $user['last_name'],
+				"needhelp" => "",
+				"canhelp" => "",
+				"description" => ""
+			);
+			$this->db->insert("users", $data);
+		}
+	}
 }
