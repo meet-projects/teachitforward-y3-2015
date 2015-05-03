@@ -80,11 +80,7 @@
 		<input type="text" class="form-control" /><br>
       </div>
       <div class="modal-footer">
-        <a href="#" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="float:left;">Log out <span class="caret"></span></a>
-		<ul class="dropdown-menu" role="menu">
-		  <li><a href="<?php echo base_url(); ?>index.php/login/logout">Log out <small>from teach it forward</small></a></li>
-		  <li><a href="<?php echo $logOutUrl; ?>">Log out <small>from teach it forward and Facebook</small></a></li>
-		</ul>
+        <a href="<?php echo base_url(); ?>index.php/login/logout" class="btn btn-danger" style="float:left;">Log out</span></a>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary">Save changes</button>
       </div>

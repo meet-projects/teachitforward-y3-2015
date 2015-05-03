@@ -1,4 +1,7 @@
 <?php
+use Facebook\FacebookSession;
+use Facebook\FacebookRedirectLoginHelper;
+use Facebook\FacebookRequest;
 
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
@@ -22,12 +25,11 @@ class template extends MX_Controller {
      */
     public function __construct() {
 		parent::__construct();
+		session_start();
+		define('FACEBOOK_SDK_V4_SRC_DIR', APPPATH . '/libraries/facebook4/src/Facebook/');
+		require APPPATH . '/libraries/facebook4/autoload.php';
 
-		// Load facebook library and pass associative array which contains appId and secret key
-		$this->load->library('facebook', array('appId' => '1600116246925482', 'secret' => '1a91c383ad0491be231cd298933810f6'));
-
-		// Get user's login information
-		$this->user = $this->facebook->getUser();
+		FacebookSession::setDefaultApplication('1600116246925482', '1a91c383ad0491be231cd298933810f6');
     }
 
     public function index() {
@@ -36,25 +38,21 @@ class template extends MX_Controller {
     
     public function loadView($title, $viewpath, $passdata){
 		//login check
-		if ($this->session->userdata("Logged_in")==true and $this->user) {
+		if ($this->session->userdata("Logged_in")==true) {
 			//add facebook data to the passdata
-			$profile = $this->facebook->api('/me/');
-			$passdata['first_name'] = $profile['first_name'];
-			$passdata['last_name'] = $profile['last_name'];
-			$passdata['user_id'] = $profile['id'];
-			$passdata['profile_picture'] = "https://graph.facebook.com/" . $profile["id"] . "/picture?type=large";
+			$passdata['first_name'] = $this->session->userdata("First");
+			$passdata['last_name'] = $this->session->userdata("Last");
+			$passdata['user_id'] = $this->session->userdata("ID");
+			$passdata['profile_picture'] = "https://graph.facebook.com/" . $this->session->userdata("ID") . "/picture?type=large";
 		} else {
 			redirect(base_url(), 'refresh');
             return;
 		}
-		// Get logout url of facebook
-		$logout = $this->facebook->getLogoutUrl(array('next' => base_url() . 'index.php/login/logout'));
 		
         $data = array(
             "title" => $title,
             "viewPath" => $viewpath,
-            "passData" => $passdata,
-			"logOutUrl" => $logout
+            "passData" => $passdata
         );
         $this->load->view('TemplateView', $data);
     }
