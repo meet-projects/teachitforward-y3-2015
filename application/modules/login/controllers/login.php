@@ -47,8 +47,6 @@ class Login extends MX_Controller {
 		  // When validation fails or other local issues
 		}
 		if ($session) {
-			//$profile = $this->facebook->api('/me/');
-			//$this->login_model->registerInDB($profile);
 			$request = new FacebookRequest($session, 'GET', '/me');
 			$response = $request->execute();
 			$graphObject = $response->getGraphObject(GraphUser::className());
@@ -56,6 +54,7 @@ class Login extends MX_Controller {
 			$this->session->set_userdata("ID", $graphObject->getID());
 			$this->session->set_userdata("First", $graphObject->getFirstName());
 			$this->session->set_userdata("Last", $graphObject->getLastName());
+			$this->login_model->registerInDB($graphObject->getID(), $graphObject->getFirstName(), $graphObject->getLastName());
 			redirect(site_url('home'), 'refresh');
 			return;
 		} else {
