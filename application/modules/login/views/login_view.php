@@ -51,7 +51,7 @@
     </div>
     <div class="navbar-collapse collapse" id="navbar">
       <ul class="nav navbar-nav">
-        <li><a href="#sec1">What is teach it forward</a></li>
+        <li><a href="#sec1">What is teach it forwardTT</a></li>
         <li><a href="#sec2">About Us</a></li>
         <!-- <li><a href="#sec3">Contact Us</a></li> -->
       </ul>
