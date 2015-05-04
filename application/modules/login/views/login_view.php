@@ -20,7 +20,7 @@
 			$(".bio-img").on("click", function() {
 				$(".bio-p").css('display', 'none');
 				$(".bio-active").addClass("bio-img").removeClass("bio-active");
-				$("#bio-" + this.src.substring(this.src.lastIndexOf("/")+1,this.src.indexOf("."))).css('display', 'block');
+				$("#bio-" + $(this).data('name')).css('display', 'block');
 				$(this).addClass("bio-active").removeClass("bio-img");
 				loadEvents();
 			});
@@ -90,12 +90,12 @@
     <div class="col-md-12 text-center">&nbsp;</div>
     <div class="col-md-12 text-center" style="color:#000;font-size:120%;">
 	<center>
-		<img src="<?php echo base_url(); ?>images/bahjat.png" class="bio-img" style="margin-right:20px;" />
-		<img src="<?php echo base_url(); ?>images/moran.png" class="bio-img" style="margin-right:20px;" />
-		<img src="<?php echo base_url(); ?>images/sireen.png" class="bio-img" style="margin-right:20px;" />
-		<img src="<?php echo base_url(); ?>images/ziv.png" class="bio-img" style="margin-right:20px;" />
-		<img src="<?php echo base_url(); ?>images/tibah.png" class="bio-img" style="margin-right:20px;" />
-		<img src="<?php echo base_url(); ?>images/azeez.png" class="bio-img" />
+		<img data-name="bahjat" src="<?php echo base_url(); ?>images/bahjat.png" class="bio-img" style="margin-right:20px;" />
+		<img data-name="moran" src="<?php echo base_url(); ?>images/moran.png" class="bio-img" style="margin-right:20px;" />
+		<img data-name="sireen" src="<?php echo base_url(); ?>images/sireen.png" class="bio-img" style="margin-right:20px;" />
+		<img data-name="ziv" src="<?php echo base_url(); ?>images/ziv.png" class="bio-img" style="margin-right:20px;" />
+		<img data-name="tibah" src="<?php echo base_url(); ?>images/tibah.png" class="bio-img" style="margin-right:20px;" />
+		<img data-name="azeez" src="<?php echo base_url(); ?>images/azeez.png" class="bio-img" />
 		<br><br>
 		<p class="bio-p" id="bio-bahjat" style="width:600px;display:none;">Bahjat: My name is Bahjat Kawar, I’m 15 years old, and I’m from Nazareth. I specialize in Physics and Computer Science at school. I’ve loved coding since I was a kid, so I’m fluent in 8 programming languages and I’ve worked on and published a number of websites since I was 10.</p>
 		<p class="bio-p" id="bio-moran" style="width:600px;display:none;">Moran: My name is Moran, I’m 16 years old, and I’m from Cfar Yehoshua. I study journalism, docu-filmmaking, and philosophy. I like to draw and design.</p>
