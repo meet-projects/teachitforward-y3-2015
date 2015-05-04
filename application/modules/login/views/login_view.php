@@ -76,7 +76,7 @@
       <div class="col-md-12 text-center">
         <h1>What is teach it forward ?</h1>
 <p class="lead">Our website allows students to teach Tawjihi or Bagrut subjects and get taught in return.</p>
-        <p class="lead">It is especially for Bagrut and Tawjihi students, it helps them to communicate with others, gives them the ability to learn new things and get help in subjects they're not good at and in return they might help other students in subjects they're good at.The participant who helps the most will get a cash prize.</p>
+        <p class="lead">It is especially for Bagrut and Tawjihi students, it helps them to communicate with others, gives them the ability to learn new things and get help in subjects they're not good at and in return they might help other students in subjects they're good at. Various prizes will be offered to those who help a lot.</p>
       </div>
     </div>
   </div>
@@ -97,12 +97,12 @@
 		<img data-name="tibah" src="<?php echo base_url(); ?>images/tibah.png" class="bio-img" style="margin-right:20px;" />
 		<img data-name="azeez" src="<?php echo base_url(); ?>images/azeez.png" class="bio-img" />
 		<br><br>
-		<p class="bio-p" id="bio-bahjat" style="width:600px;display:none;">Bahjat: My name is Bahjat Kawar, I’m 15 years old, and I’m from Nazareth. I specialize in Physics and Computer Science at school. I’ve loved coding since I was a kid, so I’m fluent in 8 programming languages and I’ve worked on and published a number of websites since I was 10.</p>
-		<p class="bio-p" id="bio-moran" style="width:600px;display:none;">Moran: My name is Moran, I’m 16 years old, and I’m from Cfar Yehoshua. I study journalism, docu-filmmaking, and philosophy. I like to draw and design.</p>
-		<p class="bio-p" id="bio-tibah" style="width:600px;display:none;">Tibah: My name is Tibah Saad, I’m 16 years old, and I’m from Maghar. I sing and play the cello. I like business a lot and I think it’s going to be a big part of my future.</p>
-		<p class="bio-p" id="bio-ziv" style="width:600px;display:none;">Ziv: My name is Ziv Hadad, I'm 17 years old and I'm from Ahuzat Barak. I specialize in Physics and Computer Science at school and on a program of the Israeli Cyber Intelligence. I like coding, learning different cool stuffs in life and cooking food from different cultures.</p>
-		<p class="bio-p" id="bio-sireen" style="width:600px;display:none;">Sireen: My name is Sireen Hafi, I'm 16 years old and I'm from Nazareth. I study in St. Joseph Seminary and High School. I like business and I'm really good at it. I enjoy thinking about ideas that might change something in our society, and I will keep creating ideas that would make a change.</p>
-		<p class="bio-p" id="bio-azeez" style="width:600px;display:none;">Azeez: My name is Azeez Zoabi, I'm 16 years old, and I'm from Nazareth. I play the guitar, I like programing and my dream is to be an amazing programmer, so I'm going to take part in the programming of this project.</p>
+		<p class="bio-p" id="bio-bahjat" style="width:600px;display:none;">My name is Bahjat Kawar, I’m 15 years old, and I’m from Nazareth. I specialize in Physics and Computer Science at school. I’ve loved coding since I was a kid, so I’m fluent in 8 programming languages and I’ve worked on and published a number of websites since I was 10.</p>
+		<p class="bio-p" id="bio-moran" style="width:600px;display:none;">My name is Moran Daniel, I’m 16 years old, and I’m from Cfar Yehoshua. I study journalism, docu-filmmaking, and philosophy. I like to draw and design.</p>
+		<p class="bio-p" id="bio-tibah" style="width:600px;display:none;">My name is Tibah Saad, I’m 16 years old, and I’m from Maghar. I sing and play the cello. I like business a lot and I think it’s going to be a big part of my future.</p>
+		<p class="bio-p" id="bio-ziv" style="width:600px;display:none;">My name is Ziv Hadad, I'm 17 years old and I'm from Ahuzat Barak. I specialize in Physics and Computer Science at school and on a program of the Israeli Cyber Intelligence. I like coding, learning different cool stuffs in life and cooking food from different cultures.</p>
+		<p class="bio-p" id="bio-sireen" style="width:600px;display:none;">My name is Sireen Hafi, I'm 16 years old and I'm from Nazareth. I study in St. Joseph Seminary and High School. I like business and I'm really good at it. I enjoy thinking about ideas that might change something in our society, and I will keep creating ideas that would make a change.</p>
+		<p class="bio-p" id="bio-azeez" style="width:600px;display:none;">My name is Azeez Zoabi, I'm 16 years old, and I'm from Nazareth. I play the guitar, I like programing and my dream is to be an amazing programmer, so I'm going to take part in the programming of this project.</p>
 		<p class="bio-p" id="bio-all" style="width:600px;display:block;">We think we are perfect for this project because we ourselves are Bagrut students and we know all the pain points while studying and how sometimes we don’t really understand the subjects, and how we all help each other out in subjects. But it’s not always convenient. That’s why we thought of making a platform for everyone to help each other in an organized way, and even from all over the country!<br><br>Click on the images above to read about each of our team members</p>
 	</center>
     </div>
