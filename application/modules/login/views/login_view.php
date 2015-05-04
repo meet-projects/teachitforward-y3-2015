@@ -97,7 +97,7 @@
 		<img data-name="tibah" src="<?php echo base_url(); ?>images/tibah.png" class="bio-img" style="margin-right:20px;" />
 		<img data-name="azeez" src="<?php echo base_url(); ?>images/azeez.png" class="bio-img" />
 		<br><br>
-		<p class="bio-p" id="bio-bahjat" style="width:600px;display:none;">My name is Bahjat Kawar, I’m 15 years old, and I’m from Nazareth. I specialize in Physics and Computer Science at school. I’ve loved coding since I was a kid, so I’m fluent in 8 programming languages and I’ve worked on and published a number of websites since I was 10.</p>
+		<p class="bio-p" id="bio-bahjat" style="width:600px;display:none;">My name is Bahjat Kawar, I’m 16 years old, and I’m from Nazareth. I specialize in Physics and Computer Science at school. I’ve loved coding since I was a kid, so I’m fluent in 8 programming languages and I’ve worked on and published a number of websites since I was 10.</p>
 		<p class="bio-p" id="bio-moran" style="width:600px;display:none;">My name is Moran Daniel, I’m 16 years old, and I’m from Cfar Yehoshua. I study journalism, docu-filmmaking, and philosophy. I like to draw and design.</p>
 		<p class="bio-p" id="bio-tibah" style="width:600px;display:none;">My name is Tibah Saad, I’m 16 years old, and I’m from Maghar. I sing and play the cello. I like business a lot and I think it’s going to be a big part of my future.</p>
 		<p class="bio-p" id="bio-ziv" style="width:600px;display:none;">My name is Ziv Hadad, I'm 17 years old and I'm from Ahuzat Barak. I specialize in Physics and Computer Science at school and on a program of the Israeli Cyber Intelligence. I like coding, learning different cool stuffs in life and cooking food from different cultures.</p>
