@@ -45,9 +45,15 @@
     <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
     <script src="<?php echo base_url(); ?>js/bootstrap-select.js"></script>
 	<script type="text/javascript">
+		var canhelp="";
+		var needhelp="";
 		$(document).ready(function() {
 			$('.selectpicker').selectpicker();
-			$("#needhelp, #canhelp").on('change', function() {
+			
+			canhelp = $("#canhelp").val().join(",");
+			needhelp = $("#needhelp").val().join(",");
+			
+			$("#saveChanges").on('click', function() {
 				$.ajax({
 					url: "<?php echo base_url(); ?>index.php/template/updateSubjects",
 					data: {
@@ -68,6 +74,13 @@
 					complete: function(xhr, status) {
 					}
 				});
+				canhelp = $("#canhelp").val().join(",");
+				needhelp = $("#needhelp").val().join(",");
+			});
+			
+			$("#close").on('click', function() {
+				$("#canhelp").val(canhelp.split(","));
+				$("#needhelp").val(needhelp.split(","));
 			});
 		});
 	</script>
@@ -125,7 +138,7 @@
       <div class="modal-footer">
         <a href="<?php echo base_url(); ?>index.php/login/logout" class="btn btn-danger" style="float:left;">Log out</span></a>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
       </div>
     </div>
   </div>
