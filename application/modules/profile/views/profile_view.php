@@ -21,6 +21,6 @@ function toggleSize(img) {
 
 <div class="row">
 	<div class="col-lg-4">
-	
+	</div>
 </div>
 <!-- /.row -->
