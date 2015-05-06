@@ -81,8 +81,8 @@
 			$("#close").on('click', function() {
 				$("#canhelp").val(canhelp.split(","));
 				$("#needhelp").val(needhelp.split(","));
-				$("#canhelp").selectipicker('val', canhelp.split(","));
-				$("#needhelp").selectipicker('val', needhelp.split(","));
+				$("#canhelp").selectpicker('val', canhelp.split(","));
+				$("#needhelp").selectpicker('val', needhelp.split(","));
 			});
 		});
 	</script>
