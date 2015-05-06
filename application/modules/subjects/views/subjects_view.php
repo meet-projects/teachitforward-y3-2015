@@ -12,15 +12,14 @@ $(document).ready(function() {
     margin-bottom: 30px;
 	width:400px;
 	height:300px;
-	font-size:150%;
 }
 .thumbnail {
 	height:100%;
 }
 .inner {
 	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
+	top: calc(50% - 25px);
+	font-size:25px;
 }
 .row {
 	padding-left:200px;
