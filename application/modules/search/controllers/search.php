@@ -9,7 +9,7 @@ class search extends MX_Controller {
 		$this->load->model("search_model");
 		
 		$q = $this->input->get("q");
-		if($this->input->get("q")==FALSE)
+		if($this->input->get("q")===FALSE)
 			return;
 		
 		$results = $this->search_model->getSearch($q);
