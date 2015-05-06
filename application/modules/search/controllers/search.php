@@ -12,7 +12,7 @@ class search extends MX_Controller {
 		if($this->input->get("q")==FALSE)
 			return;
 		
-		$results = $this->profile_model->getSearch($q);
+		$results = $this->search_model->getSearch($q);
 		
 		$module = Modules::load('template');
 		$data = array(
