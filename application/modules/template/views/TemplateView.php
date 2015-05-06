@@ -96,8 +96,12 @@
 			});
 			
 			$('#logOut').on('click', function () {
-				if((canhelp != $("#canhelp").val().join(",") || needhelp != $("#needhelp").val().join(",")) && confirm("Are you sure you want to exit without saving changes ?"))
-				{
+				if (canhelp != $("#canhelp").val().join(",") || needhelp != $("#needhelp").val().join(",")) {
+					if (confirm("Are you sure you want to log out without saving changes ?"))	{
+						window.location.href="<?php echo base_url(); ?>index.php/login/logout";
+					}
+				}
+				else {
 					window.location.href="<?php echo base_url(); ?>index.php/login/logout";
 				}
 			});
