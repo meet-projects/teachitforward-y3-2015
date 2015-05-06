@@ -35,8 +35,8 @@ $(document).ready(function() {
 		echo "<div class='item active'><div class='row'><center>";
 		foreach($Subjects as $s) {
 			if($c==0) echo "<div class='item'><div class='row'><center>";
-			echo '<div class="col-lg-4 col-md-4 col-xs-6 thumb"><a class="thumbnail" href="' . base_url() . 'index.php/subjects/subject?id=' . $s->id . '">';
-			echo '<span class="inner">' . $s->name . ($s->major==1 ? "<br><small>(Major)</small>" : "") . '</span>';
+			echo '<div class="col-lg-4 col-md-4 col-xs-6 thumb"><a' . ($s->major==1 ? 'style="background:#eee;"' : '') . ' class="thumbnail" href="' . base_url() . 'index.php/subjects/subject?id=' . $s->id . '">';
+			echo '<span class="inner">' . $s->name . '</span>';
 			echo '</a></div>';
 			$c++;
 			if($c==0) $c++;
