@@ -19,7 +19,7 @@ class subjects_model extends CI_Model {
 	}
 	
 	public function getSubject($sid) {
-		$this->db->select("id, name, major")->from("subjects")->order_by("major, name");
+		$this->db->select("id, name, major")->from("subjects")->where("id", $sid);
 		$subject = $this->db->get()->result();
 		if(count($subject)==0) return false;
 		return $subject[0];
