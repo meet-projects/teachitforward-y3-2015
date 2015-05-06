@@ -30,52 +30,23 @@ $(document).ready(function() {
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-    <div class="item active">
-        <div class="row"><center>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <span class="inner">English</span>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <span class="inner">Arabic</span>
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-        </center></div>
-    </div>
-
-    <div class="item">
-      fghfgh
-    </div>
-
-    <div class="item">
-      hfghfghaaa
-    </div>
-
-    <div class="item">
-      fghfghfesd
-    </div>
+	<?php
+		$c=-1;
+		echo "<div class='item active'><div class='row'><center>";
+		foreach($Subjects as $s) {
+			if($c==0) echo "<div class='item'><div class='row'><center>";
+			echo '<div class="col-lg-4 col-md-4 col-xs-6 thumb"><a class="thumbnail" href="' . base_url() . 'index.php/subjects/subject?id=' . $s->id . '">';
+			echo '<span class="inner">' . $s->name . '</span>';
+			echo '</a></div>';
+			$c++;
+			if($c==0) $c++;
+			if($c==6) {
+				echo "</center></div></div>";
+				$c=0;
+			}
+		}
+		if ($c!=0) echo "</center></div></div>";
+	?>
   </div>
 
   <!-- Left and right controls -->
