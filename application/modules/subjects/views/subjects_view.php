@@ -21,7 +21,7 @@ $(document).ready(function() {
 	top: calc(50% - 25px);
 	font-size:25px;
 }
-.row {
+.carouselRow {
 	padding-left:200px;
 	padding-right:200px;
 }
@@ -41,9 +41,9 @@ $(document).ready(function() {
   <div class="carousel-inner" role="listbox">
 	<?php
 		$c=-1;
-		echo "<div class='item active'><div class='row'><center>";
+		echo "<div class='item active'><div class='row carouselRow'><center>";
 		foreach($Subjects as $s) {
-			if($c==0) echo "<div class='item'><div class='row'><center>";
+			if($c==0) echo "<div class='item'><div class='row carouselRow'><center>";
 			echo '<div class="col-lg-4 col-md-4 col-xs-6 thumb"><a' . ($s->major==1 ? ' style="background:#eee;"' : '') . ' class="thumbnail" href="' . base_url() . 'index.php/subjects/subject?id=' . $s->id . '">';
 			echo '<span class="inner">' . $s->name . '</span>';
 			echo '</a></div>';
