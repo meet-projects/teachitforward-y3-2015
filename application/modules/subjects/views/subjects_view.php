@@ -10,8 +10,8 @@ $(document).ready(function() {
 <style type="text/css">
 .thumb {
     margin-bottom: 30px;
-	width:200px;
-	height:150px;
+	width:300px;
+	height:225px;
 }
 .thumbnail {
 	height:100%;
@@ -49,6 +49,7 @@ $(document).ready(function() {
 			echo '</a></div>';
 			$c++;
 			if($c==0) $c++;
+			if($c==3) echo "</center></div><div class='row carouselRow'><center>";
 			if($c==6) {
 				echo "</center></div></div>";
 				$c=0;
