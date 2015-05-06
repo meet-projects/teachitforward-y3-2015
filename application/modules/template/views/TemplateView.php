@@ -78,11 +78,21 @@
 				needhelp = $("#needhelp").val().join(",");
 			});
 			
-			$("#close").on('click', function() {
-				$("#canhelp").val(canhelp.split(","));
-				$("#needhelp").val(needhelp.split(","));
-				$("#canhelp").selectpicker('val', canhelp.split(","));
-				$("#needhelp").selectpicker('val', needhelp.split(","));
+			$('#myModal').on('hidden.bs.modal', function () {
+				if((canhelp != $("#canhelp").val().join(",") || needhelp != $("#needhelp").val().join(",")) && confirm("Are you sure you want to exit without saving changes ?"))
+				{
+					$("#canhelp").val(canhelp.split(","));
+					$("#needhelp").val(needhelp.split(","));
+					$("#canhelp").selectpicker('val', canhelp.split(","));
+					$("#needhelp").selectpicker('val', needhelp.split(","));
+				}
+			});
+			
+			$('#logOut').on('click', function () {
+				if((canhelp != $("#canhelp").val().join(",") || needhelp != $("#needhelp").val().join(",")) && confirm("Are you sure you want to exit without saving changes ?"))
+				{
+					window.location.href="<?php echo base_url(); ?>index.php/login/logout";
+				}
 			});
 		});
 	</script>
@@ -138,9 +148,9 @@
 		</select><br>
       </div>
       <div class="modal-footer">
-        <a href="<?php echo base_url(); ?>index.php/login/logout" class="btn btn-danger" style="float:left;">Log out</span></a>
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
+        <a href="#" class="btn btn-danger" style="float:left;" id="logOut">Log out</span></a>
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveChanges">Save changes</button>
       </div>
     </div>
   </div>
