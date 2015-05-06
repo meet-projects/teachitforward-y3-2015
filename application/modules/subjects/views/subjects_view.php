@@ -26,6 +26,15 @@ $(document).ready(function() {
 	padding-right:200px;
 }
 </style>
+<!-- Page Heading -->
+<div class="row">
+	<div class="col-lg-12">
+		<h1 class="page-header">
+			Subjects
+		</h1>
+	</div>
+</div>
+
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
   <!-- Wrapper for slides -->
