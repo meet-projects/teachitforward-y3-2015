@@ -1,8 +1,6 @@
 <style type="text/css">
 tr {
 	border-bottom: 1px solid #eee;
-	margin-bottom : 10px;
-	padding-bottom : 2px;
 }
 </style>
 <!-- Page Heading -->
@@ -20,7 +18,7 @@ tr {
 		<table style="width:100%;">
 		<?php
 		foreach($Results as $u) {
-			echo '<tr><td style="width:100px;"><a href="' . base_url() . 'index.php/profile?id=' . $u->id . '"><img src="https://graph.facebook.com/' . $u->id . '/picture?type=large" style="height:60px;" /></td><td><a href="' . base_url() . 'index.php/profile?id=' . $u->id . '">' . $u->first . ' ' . $u->last . '</a></td></tr>';
+			echo '<tr><td style="width:100px;"><br><a href="' . base_url() . 'index.php/profile?id=' . $u->id . '"><img src="https://graph.facebook.com/' . $u->id . '/picture?type=large" style="height:60px;" /></td><td><a href="' . base_url() . 'index.php/profile?id=' . $u->id . '">' . $u->first . ' ' . $u->last . '</a></td></tr>';
 		}
 		?>
 		</table>
