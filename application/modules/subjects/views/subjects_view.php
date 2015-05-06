@@ -10,6 +10,12 @@ $(document).ready(function() {
 <style type="text/css">
 .thumb {
     margin-bottom: 30px;
+	width:400px;
+	height:300px;
+}
+.row {
+	padding-left:200px;
+	padding-right:200px;
 }
 </style>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -27,7 +33,7 @@ $(document).ready(function() {
         <div class="row"><center>
             <div class="col-lg-4 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                    English
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-xs-6 thumb">
