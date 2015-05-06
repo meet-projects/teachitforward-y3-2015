@@ -18,7 +18,7 @@ class template_model extends CI_Model {
         parent::__construct();
     }
 	
-	function getSubjects($userID) {
+	public function getSubjects($userID) {
 		$this->db->select("id, name, major")->from("subjects")->order_by("major, name");
 		$subjects = $this->db->get()->result();
 		$this->db->select("canhelp, needhelp")->from("users")->where("id", $userID);
@@ -33,11 +33,11 @@ class template_model extends CI_Model {
 		return $subjects;
 	}
 	
-	function updateCanHelp($userID, $subjects) {
+	public function updateCanHelp($userID, $subjects) {
 		$this->db->set("canhelp", $subjects)->where("id", $userID)->update("users");
 	}
 	
-	function updateNeedHelp($userID, $subjects) {
+	public function updateNeedHelp($userID, $subjects) {
 		$this->db->set("needhelp", $subjects)->where("id", $userID)->update("users");
 	}
 

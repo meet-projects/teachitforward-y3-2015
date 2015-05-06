@@ -46,7 +46,7 @@ class template extends MX_Controller {
 			$passdata['profile_picture'] = "https://graph.facebook.com/" . $this->session->userdata("ID") . "/picture?type=large";
 			//add subjects to the passdata
 			$this->load->model("template_model");
-			$passdata['subjects'] = $this->template_model->getSubjects($this->session->userdata("ID"));
+			$subjects = $this->template_model->getSubjects($this->session->userdata("ID"));
 		} else {
 			redirect(base_url(), 'refresh');
             return;
@@ -55,7 +55,8 @@ class template extends MX_Controller {
         $data = array(
             "title" => $title,
             "viewPath" => $viewpath,
-            "passData" => $passdata
+            "passData" => $passdata,
+			"subjects" => $subjects
         );
         $this->load->view('TemplateView', $data);
     }
