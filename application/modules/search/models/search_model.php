@@ -13,7 +13,7 @@ class search_model extends CI_Model {
     }
 	
 	public function getSearch($query) {
-		$this->db->select("first, last, id")->from("users")->where("(' ' + first + ' ' + last + ' ') LIKE '%".$query."%'");
+		$this->db->select("first, last, id")->from("users")->where("CONCAT(' ', first, ' ', last, ' ') LIKE '%".$query."%'");
 		$result = $this->db->get()->result();
 		return $result;
 	}
