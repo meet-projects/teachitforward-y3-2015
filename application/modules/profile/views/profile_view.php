@@ -1,6 +1,6 @@
 <script type="text/javascript">
 function toggleSize(img) {
-	if(img.style.width=="200px") {
+	if(img.style.height=="150px") {
 		img.style.height="60px";
 	} else {
 		img.style.height="150px";
