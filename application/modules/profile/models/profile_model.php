@@ -20,6 +20,7 @@ class profile_model extends CI_Model {
 	}
 	
 	public function getSubjects($subjects) {
+		if($subjects=="") return "None";
 		$this->db->select("name")->from("subjects")->where("id IN (" . $subjects . ")");
 		$result = $this->db->get()->result();
 		$subjects = "";
