@@ -16,7 +16,7 @@ class search extends MX_Controller {
 		
 		$module = Modules::load('template');
 		$data = array(
-			'Name' => 'profile',
+			'Name' => 'search',
 			'Results' => $results
 		);
 		$module->loadView("Search", "search_view", $data);
