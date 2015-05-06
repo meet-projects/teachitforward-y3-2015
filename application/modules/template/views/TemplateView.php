@@ -78,13 +78,18 @@
 				needhelp = $("#needhelp").val().join(",");
 			});
 			
-			$('#myModal').on('hidden.bs.modal', function () {
+			$('#myModal').on('hide.bs.modal', function (e) {
 				if((canhelp != $("#canhelp").val().join(",") || needhelp != $("#needhelp").val().join(",")) && confirm("Are you sure you want to exit without saving changes ?"))
 				{
 					$("#canhelp").val(canhelp.split(","));
 					$("#needhelp").val(needhelp.split(","));
 					$("#canhelp").selectpicker('val', canhelp.split(","));
 					$("#needhelp").selectpicker('val', needhelp.split(","));
+				}
+				else {
+					e.preventDefault();
+					e.stopImmediatePropagation();
+					return false; 
 				}
 			});
 			
