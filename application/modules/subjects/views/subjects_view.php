@@ -15,6 +15,9 @@ $(document).ready(function() {
 	font-size:150%;
 }
 .thumbnail {
+	height:100%;
+}
+.inner {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
@@ -39,12 +42,12 @@ $(document).ready(function() {
         <div class="row"><center>
             <div class="col-lg-4 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    English
+                    <span class="inner">English</span>
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    Arabic
+                    <span class="inner">Arabic</span>
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-xs-6 thumb">
