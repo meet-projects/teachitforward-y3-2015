@@ -13,7 +13,7 @@ class profile extends MX_Controller {
 			$id = this->session->userdata("ID");
 		
 		$details = $this->profile_model->getDetails($id);
-		if($details==FALSE) return;
+		//if($details==FALSE) return;
 		
 		$module = Modules::load('template');
 		$data = array(
