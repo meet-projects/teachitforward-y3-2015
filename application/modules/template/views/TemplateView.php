@@ -80,7 +80,7 @@
 			  ?>
 			</optgroup>
 		</select><br>
-        Subjects you need help at :<br>
+        Subjects you need help at :<br><?php echo var_dump($subjects); ?>
 		<select class="selectpicker" multiple data-live-search="true" data-size="6" id="needhelp">
 			<optgroup label="Obligatory">
 			  <?php
