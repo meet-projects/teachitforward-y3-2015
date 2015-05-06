@@ -16,7 +16,7 @@ $(document).ready(function() {
 .thumbnail {
 	height:100%;
 }
-.inner {
+.innerA {
 	position: relative;
 	top: calc(50% - 25px);
 	font-size:25px;
@@ -45,7 +45,7 @@ $(document).ready(function() {
 		foreach($Subjects as $s) {
 			if($c==0) echo "<div class='item'><div class='row carouselRow'><center>";
 			echo '<div class="col-lg-4 col-md-4 col-xs-6 thumb"><a' . ($s->major==1 ? ' style="background:#eee;"' : '') . ' class="thumbnail" href="' . base_url() . 'index.php/subjects/subject?id=' . $s->id . '">';
-			echo '<span class="inner">' . $s->name . '</span>';
+			echo '<span class="innerA">' . $s->name . '</span>';
 			echo '</a></div>';
 			$c++;
 			if($c==0) $c++;
