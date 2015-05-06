@@ -15,10 +15,10 @@ class home_model extends CI_Model {
 	public function getYouCanHelp($id) {
 		$this->db->select("canhelp")->from("users")->where("id", $id);
 		$me = $this->db->get()->result();
-		$subjects = explode("," $me[0]->canhelp);
+		$subjects = explode(",", $me[0]->canhelp);
 		$users = array();
 		$userids="";
-		/*foreach($subjects as $s) {
+		foreach($subjects as $s) {
 			$this->db->select("id, first, last")->from("users")->where("CONCAT(',', needhelp, ',') LIKE '%," . $s->id . ",%'");
 			$result = $this->db->get()->result();
 			foreach($result as $r) {
@@ -27,17 +27,17 @@ class home_model extends CI_Model {
 					$userids.=",".$r->id;
 				}
 			}
-		}*/
+		}
 		return $users;
 	}
 	
 	public function getCanHelpYou($id) {
 		$this->db->select("needhelp")->from("users")->where("id", $id);
 		$me = $this->db->get()->result();
-		$subjects = explode("," $me[0]->needhelp);
+		$subjects = explode(",", $me[0]->needhelp);
 		$users = array();
 		$userids="";
-		/*foreach($subjects as $s) {
+		foreach($subjects as $s) {
 			$this->db->select("id, first, last")->from("users")->where("CONCAT(',', canhelp, ',') LIKE '%," . $s->id . ",%'");
 			$result = $this->db->get()->result();
 			foreach($result as $r) {
@@ -46,7 +46,7 @@ class home_model extends CI_Model {
 					$userids.=",".$r->id;
 				}
 			}
-		}*/
+		}
 		return $users;
 	}
 }
