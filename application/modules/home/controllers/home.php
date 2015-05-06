@@ -10,8 +10,8 @@ class home extends MX_Controller {
 		$module = Modules::load('template');
 		$data = array(
 			'Name' => 'home',
-			'CanHelpYou' => $this->home_model->getCanHelpYou(),
-			'YouCanHelp' => $this->home_model->getYouCanHelp()
+			'CanHelpYou' => $this->home_model->getCanHelpYou($this->Session->userdata("ID")),
+			'YouCanHelp' => $this->home_model->getYouCanHelp($this->Session->userdata("ID"))
 		);
 		$module->loadView("Home", "HomeView", $data);
     }
