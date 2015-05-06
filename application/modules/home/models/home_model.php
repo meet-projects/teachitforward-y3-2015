@@ -19,7 +19,7 @@ class home_model extends CI_Model {
 		$users = array();
 		$userids="";
 		foreach($subjects as $s) {
-			$this->db->select("id, first, last")->from("users")->where("CONCAT(',', needhelp, ',') LIKE '%," . $s->id . ",%'");
+			$this->db->select("id, first, last")->from("users")->where("CONCAT(',', needhelp, ',') LIKE '%," . $s . ",%'");
 			$result = $this->db->get()->result();
 			foreach($result as $r) {
 				if(strpos($userids, ",".$r->id)===FALSE) {
@@ -38,7 +38,7 @@ class home_model extends CI_Model {
 		$users = array();
 		$userids="";
 		foreach($subjects as $s) {
-			$this->db->select("id, first, last")->from("users")->where("CONCAT(',', canhelp, ',') LIKE '%," . $s->id . ",%'");
+			$this->db->select("id, first, last")->from("users")->where("CONCAT(',', canhelp, ',') LIKE '%," . $s . ",%'");
 			$result = $this->db->get()->result();
 			foreach($result as $r) {
 				if(strpos($userids, ",".$r->id)===FALSE) {
