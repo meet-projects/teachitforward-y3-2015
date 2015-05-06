@@ -10,7 +10,7 @@ $(document).ready(function() {
 <style type="text/css">
 .thumb {
     margin-bottom: 30px;
-	width:300px;
+	width:33.333333%;
 	height:225px;
 }
 .thumbnail {
@@ -22,8 +22,8 @@ $(document).ready(function() {
 	font-size:25px;
 }
 .carouselRow {
-	padding-left:400px;
-	padding-right:200px;
+	padding-left:15%;
+	padding-right:15%;
 }
 </style>
 <!-- Page Heading -->
