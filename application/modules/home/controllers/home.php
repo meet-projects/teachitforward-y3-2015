@@ -9,7 +9,9 @@ class home extends MX_Controller {
 		$this->load->model("home_model");
 		$module = Modules::load('template');
 		$data = array(
-			'Name' => 'home'
+			'Name' => 'home',
+			'CanHelpYou' => $this->home_model->getCanHelpYou(),
+			'YouCanHelp' => $this->home_model->getYouCanHelp()
 		);
 		$module->loadView("Home", "HomeView", $data);
     }
