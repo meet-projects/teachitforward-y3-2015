@@ -10,8 +10,8 @@ $(document).ready(function() {
 <style type="text/css">
 .thumb {
     margin-bottom: 30px;
-	width:400px;
-	height:300px;
+	width:200px;
+	height:150px;
 }
 .thumbnail {
 	height:100%;
