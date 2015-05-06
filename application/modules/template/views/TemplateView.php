@@ -63,6 +63,9 @@
 					type: "POST",
 					dataType: "text",
 					success: function(data) {
+						canhelp = $("#canhelp").val().join(",");
+						needhelp = $("#needhelp").val().join(",");
+						$('#myModal').modal('hide');
 					},
 					error: function(xhr, status, errorThrown) {
 						alert("Sorry, there was a problem!");
@@ -74,22 +77,21 @@
 					complete: function(xhr, status) {
 					}
 				});
-				canhelp = $("#canhelp").val().join(",");
-				needhelp = $("#needhelp").val().join(",");
 			});
 			
 			$('#myModal').on('hide.bs.modal', function (e) {
-				if((canhelp != $("#canhelp").val().join(",") || needhelp != $("#needhelp").val().join(",")) && confirm("Are you sure you want to exit without saving changes ?"))
-				{
-					$("#canhelp").val(canhelp.split(","));
-					$("#needhelp").val(needhelp.split(","));
-					$("#canhelp").selectpicker('val', canhelp.split(","));
-					$("#needhelp").selectpicker('val', needhelp.split(","));
-				}
-				else {
-					e.preventDefault();
-					e.stopImmediatePropagation();
-					return false; 
+				if(canhelp != $("#canhelp").val().join(",") || needhelp != $("#needhelp").val().join(",")) {
+					if(confirm("Are you sure you want to exit without saving changes ?")) {
+						$("#canhelp").val(canhelp.split(","));
+						$("#needhelp").val(needhelp.split(","));
+						$("#canhelp").selectpicker('val', canhelp.split(","));
+						$("#needhelp").selectpicker('val', needhelp.split(","));
+					}
+					else {
+						e.preventDefault();
+						e.stopImmediatePropagation();
+						return false; 
+					}
 				}
 			});
 			
@@ -155,7 +157,7 @@
       <div class="modal-footer">
         <a href="#" class="btn btn-danger" style="float:left;" id="logOut">Log out</span></a>
         <button type="button" class="btn btn-default" data-dismiss="modal" id="close">Close</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveChanges">Save changes</button>
+        <button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
       </div>
     </div>
   </div>
