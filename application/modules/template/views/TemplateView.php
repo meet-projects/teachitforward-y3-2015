@@ -80,10 +80,11 @@
 			  ?>
 			</optgroup>
 		</select><br>
-        Subjects you need help at :<br><?php echo var_dump($subjects); ?>
+        Subjects you need help at :<br>
 		<select class="selectpicker" multiple data-live-search="true" data-size="6" id="needhelp">
 			<optgroup label="Obligatory">
 			  <?php
+				$subjects = $passData["subjects"];
 				$i=0;
 				for($i=0; $subjects[$i]->major==0; $i++) {
 					echo "<option value=\"" . $subjects[$i]->id . "\"" . ($subjects[$i]->needhelp==1 ? "selected='true'" : "") . ">" . $subjects[$i]->name . "</option>";
