@@ -184,9 +184,9 @@
             <ul class="nav navbar-right top-nav">
 			<li>
 			
-            <form class="navbar-form" role="search">
+            <form class="navbar-form" role="search" action="<?php echo base_url(); ?>index.php/search">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search" name="q">
+                    <input type="text" class="form-control" placeholder="Search" name="q" value="<?php if($this->input->get("q")!==FALSE) echo $this->input->get("q"); ?>">
                     <div class="input-group-btn">
                         <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
                     </div>
