@@ -41,7 +41,7 @@ $(document).ready(function() {
   <div class="carousel-inner" role="listbox">
 	<?php
 		$c=-1;
-		echo "<div class='item active'><center><div class='row carouselRow'>";
+		echo "<div class='item active'><div class='row carouselRow'><center>";
 		foreach($Subjects as $s) {
 			if($c==0) echo "<div class='item'><div class='row carouselRow'><center>";
 			echo '<div class="col-lg-4 col-md-4 col-xs-6 thumb"><a' . ($s->major==1 ? ' style="background:#eee;"' : '') . ' class="thumbnail" href="' . base_url() . 'index.php/subjects/subject?id=' . $s->id . '">';
@@ -49,13 +49,13 @@ $(document).ready(function() {
 			echo '</a></div>';
 			$c++;
 			if($c==0) $c++;
-			if($c==3) echo "</div><div class='row carouselRow'>";
+			if($c==3) echo "</center></div><div class='row carouselRow'><center>";
 			if($c==6) {
-				echo "</div></center></div>";
+				echo "</center></div></div>";
 				$c=0;
 			}
 		}
-		if ($c!=0) echo "</div></center></div>";
+		if ($c!=0) echo "</center></div></div>";
 	?>
   </div>
 
