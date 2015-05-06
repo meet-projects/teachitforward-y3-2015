@@ -2,10 +2,8 @@
 function toggleSize(img) {
 	if(img.style.width=="200px") {
 		img.style.width="80px";
-		img.style.height="60px";
 	} else {
 		img.style.width="200px";
-		img.style.height="150px";
 	}
 }
 </script>
