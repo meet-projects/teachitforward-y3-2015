@@ -12,8 +12,12 @@ $(document).ready(function() {
     margin-bottom: 30px;
 	width:400px;
 	height:300px;
-	vertical-align:middle;
 	font-size:150%;
+}
+.thumbnail {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
 }
 .row {
 	padding-left:200px;
@@ -33,14 +37,14 @@ $(document).ready(function() {
   <div class="carousel-inner" role="listbox">
     <div class="item active">
         <div class="row"><center>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb thumbnail">
-                <a href="#">
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
                     English
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                    Arabic
                 </a>
             </div>
             <div class="col-lg-4 col-md-4 col-xs-6 thumb">
