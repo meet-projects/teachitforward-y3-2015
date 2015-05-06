@@ -50,21 +50,28 @@
 		$(document).ready(function() {
 			$('.selectpicker').selectpicker();
 			
-			canhelp = $("#canhelp").val().join(",");
-			needhelp = $("#needhelp").val().join(",");
+			canhelp = "";
+			if($("#canhelp").val()!=null) canhelp = $("#canhelp").val().join(",");
+			needhelp = "";
+			if($("#needhelp").val()!=null) needhelp = $("#needhelp").val().join(",");
 			
 			$("#saveChanges").on('click', function() {
+				var ch = "", nh = "";
+				if ($("#canhelp").val()==null) ch = "";
+				else ch = $("#canhelp").val().join(",");
+				if ($("#needhelp").val()==null) nh = "";
+				else nh = $("#needhelp").val().join(",");
 				$.ajax({
 					url: "<?php echo base_url(); ?>index.php/template/updateSubjects",
 					data: {
-						needhelp : $("#needhelp").val().join(","),
-						canhelp : $("#canhelp").val().join(",")
+						needhelp : nh,
+						canhelp : ch
 					},
 					type: "POST",
 					dataType: "text",
 					success: function(data) {
-						canhelp = $("#canhelp").val().join(",");
-						needhelp = $("#needhelp").val().join(",");
+						canhelp = ch;
+						needhelp = nh;
 						$('#myModal').modal('hide');
 					},
 					error: function(xhr, status, errorThrown) {
@@ -80,7 +87,11 @@
 			});
 			
 			$('#myModal').on('hide.bs.modal', function (e) {
-				if(canhelp != $("#canhelp").val().join(",") || needhelp != $("#needhelp").val().join(",")) {
+				var nh = "";
+				if($("#needhelp").val()!=null) nh = $("#needhelp").val().join(",");
+				var ch = "";
+				if($("#canhelp").val()!=null) ch = $("#canhelp").val().join(",");
+				if(canhelp != ch || needhelp != nh) {
 					if(confirm("Are you sure you want to exit without saving changes ?")) {
 						$("#canhelp").val(canhelp.split(","));
 						$("#needhelp").val(needhelp.split(","));
@@ -96,7 +107,11 @@
 			});
 			
 			$('#logOut').on('click', function () {
-				if (canhelp != $("#canhelp").val().join(",") || needhelp != $("#needhelp").val().join(",")) {
+				var nh = "";
+				if($("#needhelp").val()!=null) nh = $("#needhelp").val().join(",");
+				var ch = "";
+				if($("#canhelp").val()!=null) ch = $("#canhelp").val().join(",");
+				if (canhelp != ch || needhelp != nh) {
 					if (confirm("Are you sure you want to log out without saving changes ?"))	{
 						window.location.href="<?php echo base_url(); ?>index.php/login/logout";
 					}
