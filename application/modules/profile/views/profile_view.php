@@ -19,7 +19,7 @@ function toggleSize(img) {
 
 <div class="row">
 	<div class="col-lg-12">
-		<b>Can help at :</b> <?php echo $CanHelp; ?>
+		<b>Can help at :</b> <?php echo $CanHelp; ?><br>
 		<b>Needs help at :</b> <?php echo $NeedHelp; ?>
 	</div>
 </div>
