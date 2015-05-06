@@ -62,22 +62,43 @@
       </div>
       <div class="modal-body">
         Subjects you can help at :<br>
-		<select class="selectpicker" multiple data-live-search="true" data-size="6">
+		<select class="selectpicker" multiple data-live-search="true" data-size="6" id="canhelp">
 			<optgroup label="Obligatory">
-			  <option value="math3">Math (3 points)</option>
-			  <option value="math4">Math (4 points)</option>
-			  <option value="math5">Math (5 points)</option>
-			  <option value="english">English</option>
-			  <option value="hebrew">Hebrew</option>
+			  <?php
+				$i=0;
+				for($i=0; $subjects[$i]->major==0; $i++) {
+					echo "<option value=\"" . $subjects[$i]->id . "\"" . ($subjects[$i]->canhelp==1 ? "selected='true'" : "") . ">" . $subjects[$i]->name . "</option>";
+					if($i>=sizeof($subjects)) break;
+				}
+			  ?>
 			</optgroup>
 			<optgroup label="Major">
-			  <option value="physics">Physics</option>
-			  <option value="chemistry">Chemistry</option>
-			  <option value="cs">Computer Science</option>
+			  <?php
+				for(; $i < sizeof($subjects); $i++) {
+					echo "<option value=\"" . $subjects[$i]->id . "\"" . ($subjects[$i]->canhelp==1 ? "selected='true'" : "") . ">" . $subjects[$i]->name . "</option>";
+				}
+			  ?>
 			</optgroup>
 		</select><br>
         Subjects you need help at :<br>
-		<input type="text" class="form-control" /><br>
+		<select class="selectpicker" multiple data-live-search="true" data-size="6" id="needhelp">
+			<optgroup label="Obligatory">
+			  <?php
+				$i=0;
+				for($i=0; $subjects[$i]->major==0; $i++) {
+					echo "<option value=\"" . $subjects[$i]->id . "\"" . ($subjects[$i]->needhelp==1 ? "selected='true'" : "") . ">" . $subjects[$i]->name . "</option>";
+					if($i>=sizeof($subjects)) break;
+				}
+			  ?>
+			</optgroup>
+			<optgroup label="Major">
+			  <?php
+				for(; $i < sizeof($subjects); $i++) {
+					echo "<option value=\"" . $subjects[$i]->id . "\"" . ($subjects[$i]->needhelp==1 ? "selected='true'" : "") . ">" . $subjects[$i]->name . "</option>";
+				}
+			  ?>
+			</optgroup>
+		</select><br>
       </div>
       <div class="modal-footer">
         <a href="<?php echo base_url(); ?>index.php/login/logout" class="btn btn-danger" style="float:left;">Log out</span></a>

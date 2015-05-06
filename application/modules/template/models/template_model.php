@@ -17,5 +17,28 @@ class template_model extends CI_Model {
         // Call the Model constructor
         parent::__construct();
     }
+	
+	function getSubjects($userID) {
+		$this->db->select("id, name, major")->from("subjects")->order_by("major, name");
+		$subjects = $this->db->get()->result();
+		$this->db->select("canhelp, needhelp")->from("users")->where("id", $userID);
+		$user = $this->db->get()->result();
+		$user = $user[0];
+		$user->canhelp = "," . $user->canhelp . ",";
+		$user->needhelp = "," . $user->needhelp . ",";
+		foreach($subjects as $s) {
+			$s->canhelp = (strpos($user->canhelp, "," . $s->id) === FALSE ? 0 : 1);
+			$s->needhelp = (strpos($user->needhelp, "," . $s->id) === FALSE ? 0 : 1);
+		}
+		return $subjects;
+	}
+	
+	function updateCanHelp($userID, $subjects) {
+		$this->db->set("canhelp", $subjects)->where("id", $userID)->update("users");
+	}
+	
+	function updateNeedHelp($userID, $subjects) {
+		$this->db->set("needhelp", $subjects)->where("id", $userID)->update("users");
+	}
 
 }
