@@ -1,9 +1,9 @@
 <script type="text/javascript">
 function toggleSize(img) {
 	if(img.style.height=="150px") {
-		img.style.height="200px";
+		img.style.height="60px";
 	} else {
-		img.style.height="300px";
+		img.style.height="150px";
 	}
 }
 </script>
