@@ -11,7 +11,7 @@ $(document).ready(function() {
 .thumb {
     margin-bottom: 30px;
 	width:33.333333%;
-	height:225px;
+	height:200px;
 }
 .thumbnail {
 	height:100%;
