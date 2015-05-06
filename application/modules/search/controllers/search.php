@@ -11,6 +11,8 @@ class search extends MX_Controller {
 		$q = $this->input->get("q");
 		if($this->input->get("q")===FALSE)
 			return;
+		if(strpos($this->input->get("q"), "'")!==FALSE or strpos($this->input->get("q"), '"')!==FALSE)
+			return;
 		
 		$results = $this->search_model->getSearch($q);
 		
