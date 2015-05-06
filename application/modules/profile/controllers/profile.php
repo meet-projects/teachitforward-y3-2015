@@ -8,8 +8,8 @@ class profile extends MX_Controller {
     public function index() {
 		$this->load->model("profile_model");
 		
-		$id = $this->input->get("id");
-		if($this->input->get("id")==FALSE)
+		//$id = $this->input->get("id");
+		//if($this->input->get("id")==FALSE)
 			$id = this->session->userdata("ID");
 		
 		$details = $this->profile_model->getDetails($id);
