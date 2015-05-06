@@ -1,9 +1,9 @@
 <script type="text/javascript">
 function toggleSize(img) {
 	if(img.style.width=="200px") {
-		img.style.width="80px";
+		img.style.height="60px";
 	} else {
-		img.style.width="200px";
+		img.style.height="150px";
 	}
 }
 </script>
@@ -11,7 +11,7 @@ function toggleSize(img) {
 <div class="row">
 	<div class="col-lg-12">
 		<h1 class="page-header">
-			<img src="<?php echo $Picture; ?>" style="width:80px;transition:width 0.5s, height 0.5s;" onclick="toggleSize(this);" /> <?php echo $First . " " . $Last; ?> <small>Profile</small>
+			<img src="<?php echo $Picture; ?>" style="height:60px;transition:width 0.5s, height 0.5s;" onclick="toggleSize(this);" /> <?php echo $First . " " . $Last; ?> <small>Profile</small>
 		</h1>
 	</div>
 </div>
