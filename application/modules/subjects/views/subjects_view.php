@@ -22,7 +22,7 @@ $(document).ready(function() {
 	font-size:25px;
 }
 .carouselRow {
-	padding-left:200px;
+	padding-left:400px;
 	padding-right:200px;
 }
 </style>
