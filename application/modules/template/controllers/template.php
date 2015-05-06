@@ -47,9 +47,6 @@ class template extends MX_Controller {
 			//add subjects to the passdata
 			$this->load->model("template_model");
 			$subjects = $this->template_model->getSubjects($this->session->userdata("ID"));
-			$canhelp = $subjects[1];
-			$needhelp = $subjects[2];
-			$subjects = $subjects[0];
 		} else {
 			redirect(base_url(), 'refresh');
             return;
@@ -59,12 +56,21 @@ class template extends MX_Controller {
             "title" => $title,
             "viewPath" => $viewpath,
             "passData" => $passdata,
-			"subjects" => $subjects,
-			"canhelp" => $canhelp,
-			"needhelp" => $needhelp
+			"subjects" => $subjects
         );
         $this->load->view('TemplateView', $data);
     }
+	
+	public function updateSubjects() {
+		//login check
+		if ($this->session->userdata("Logged_in")==true) {
+			$needhelp = $this->inpur->post("needhelp");
+			$canhelp = $this->inpur->post("canhelp");
+			$this->load->model("template_model");
+			$this->template_model->updateCanHelp($this->session->userdata("ID"), $canhelp);
+			$this->template_model->updateNeedHelp($this->session->userdata("ID"), $needhelp);
+		}
+	}
 }
 
 /* End of file login.php */

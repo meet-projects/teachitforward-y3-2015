@@ -45,12 +45,29 @@
     <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
     <script src="<?php echo base_url(); ?>js/bootstrap-select.js"></script>
 	<script type="text/javascript">
-		var needhelp = "<?php echo $needhelp; ?>";
-		var canhelp = "<?php echo $canhelp; ?>";
 		$(document).ready(function() {
 			$('.selectpicker').selectpicker();
-			$("#needhelp").on('change', function() {
-				alert(this.value);
+			$("#needhelp, #canhelp").on('change', function() {
+				$.ajax({
+					url: "<?php echo base_url(); ?>index.php/template/updateSubjects",
+					data: {
+						needhelp : $("#needhelp").val().join(","),
+						canhelp : $("#canhelp").val().join(",")
+					},
+					type: "POST",
+					dataType: "text",
+					success: function(data) {
+					},
+					error: function(xhr, status, errorThrown) {
+						alert("Sorry, there was a problem in updateBalance!");
+						alert("Error: " + errorThrown);
+						alert("Status: " + status);
+						alert(xhr);
+					},
+					// code to run regardless of success or failure
+					complete: function(xhr, status) {
+					}
+				});
 			});
 		});
 	</script>
