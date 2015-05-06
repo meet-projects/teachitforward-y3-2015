@@ -24,13 +24,15 @@ class template_model extends CI_Model {
 		$this->db->select("canhelp, needhelp")->from("users")->where("id", $userID);
 		$user = $this->db->get()->result();
 		$user = $user[0];
+		$can = $user->canhelp;
+		$need = $user->needhelp;
 		$user->canhelp = "," . $user->canhelp . ",";
 		$user->needhelp = "," . $user->needhelp . ",";
 		foreach($subjects as $s) {
 			$s->canhelp = (strpos($user->canhelp, "," . $s->id) === FALSE ? 0 : 1);
 			$s->needhelp = (strpos($user->needhelp, "," . $s->id) === FALSE ? 0 : 1);
 		}
-		return $subjects;
+		return array($subjects, $can, $need);
 	}
 	
 	public function updateCanHelp($userID, $subjects) {

@@ -45,9 +45,14 @@
     <script src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
     <script src="<?php echo base_url(); ?>js/bootstrap-select.js"></script>
 	<script type="text/javascript">
-	$(document).ready(function() {
-		$('.selectpicker').selectpicker();
-	});
+		var needhelp = "<?php echo $needhelp; ?>";
+		var canhelp = "<?php echo $canhelp; ?>";
+		$(document).ready(function() {
+			$('.selectpicker').selectpicker();
+			$("#needhelp").on('change', function() {
+				alert(this.value);
+			});
+		});
 	</script>
 
 </head>
@@ -79,7 +84,7 @@
 				}
 			  ?>
 			</optgroup>
-		</select><br>
+		</select><br><br>
         Subjects you need help at :<br>
 		<select class="selectpicker" multiple data-live-search="true" data-size="6" id="needhelp">
 			<optgroup label="Obligatory">

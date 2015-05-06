@@ -47,6 +47,9 @@ class template extends MX_Controller {
 			//add subjects to the passdata
 			$this->load->model("template_model");
 			$subjects = $this->template_model->getSubjects($this->session->userdata("ID"));
+			$canhelp = $subjects[1];
+			$needhelp = $subjects[2];
+			$subjects = $subjects[0];
 		} else {
 			redirect(base_url(), 'refresh');
             return;
@@ -56,7 +59,9 @@ class template extends MX_Controller {
             "title" => $title,
             "viewPath" => $viewpath,
             "passData" => $passdata,
-			"subjects" => $subjects
+			"subjects" => $subjects,
+			"canhelp" => $canhelp,
+			"needhelp" => $needhelp
         );
         $this->load->view('TemplateView', $data);
     }
