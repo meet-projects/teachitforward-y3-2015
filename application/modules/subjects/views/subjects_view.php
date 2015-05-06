@@ -12,6 +12,8 @@ $(document).ready(function() {
     margin-bottom: 30px;
 	width:400px;
 	height:300px;
+	vertical-align:middle;
+	font-size:150%;
 }
 .row {
 	padding-left:200px;
@@ -31,8 +33,8 @@ $(document).ready(function() {
   <div class="carousel-inner" role="listbox">
     <div class="item active">
         <div class="row"><center>
-            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb thumbnail">
+                <a href="#">
                     English
                 </a>
             </div>
