@@ -64,8 +64,8 @@ class template extends MX_Controller {
 	public function updateSubjects() {
 		//login check
 		if ($this->session->userdata("Logged_in")==true) {
-			$needhelp = $this->inpur->post("needhelp");
-			$canhelp = $this->inpur->post("canhelp");
+			$needhelp = $this->input->post("needhelp");
+			$canhelp = $this->input->post("canhelp");
 			$this->load->model("template_model");
 			$this->template_model->updateCanHelp($this->session->userdata("ID"), $canhelp);
 			$this->template_model->updateNeedHelp($this->session->userdata("ID"), $needhelp);

@@ -59,7 +59,7 @@
 					success: function(data) {
 					},
 					error: function(xhr, status, errorThrown) {
-						alert("Sorry, there was a problem in updateBalance!");
+						alert("Sorry, there was a problem!");
 						alert("Error: " + errorThrown);
 						alert("Status: " + status);
 						alert(xhr);
