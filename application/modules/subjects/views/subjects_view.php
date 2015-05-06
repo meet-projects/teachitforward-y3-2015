@@ -24,48 +24,38 @@ $(document).ready(function() {
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+        <div class="row"><center>
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="http://placehold.it/400x300" alt="">
                 </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="http://placehold.it/400x300" alt="">
                 </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="http://placehold.it/400x300" alt="">
                 </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="http://placehold.it/400x300" alt="">
                 </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="http://placehold.it/400x300" alt="">
                 </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
                     <img class="img-responsive" src="http://placehold.it/400x300" alt="">
                 </a>
             </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-        </div>
+        </center></div>
     </div>
 
     <div class="item">
