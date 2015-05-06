@@ -18,7 +18,9 @@ function toggleSize(img) {
 <!-- /.row -->
 
 <div class="row">
-	<div class="col-lg-12">dfsf
+	<div class="col-lg-12">
+		<b>Can help at :</b> <?php echo $CanHelp; ?>
+		<b>Needs help at :</b> <?php echo $NeedHelp; ?>
 	</div>
 </div>
 <!-- /.row -->

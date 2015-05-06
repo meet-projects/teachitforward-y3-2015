@@ -18,4 +18,15 @@ class profile_model extends CI_Model {
 		if (count($result)==0) return false;
 		return $result[0];
 	}
+	
+	public function getSubjects($subjects) {
+		$this->db->select("name")->from("subjects")->where("id IN (" . $subjects . ")");
+		$result = $this->db->get()->result();
+		$subjects = "";
+		foreach($result as $s) {
+			$subjects .= ", ".$s->name;
+		}
+		$subjects = substr($subjects, 1);
+		return $subjects;
+	}
 }
