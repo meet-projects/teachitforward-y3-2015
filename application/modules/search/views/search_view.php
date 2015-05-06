@@ -1,3 +1,8 @@
+<style type="text/css">
+tr {
+	border-bottom: 1px solid gray;
+}
+</style>
 <!-- Page Heading -->
 <div class="row">
 	<div class="col-lg-12">
@@ -10,11 +15,13 @@
 
 <div class="row">
 	<div class="col-lg-12">
+		<table style="width:100%;">
 		<?php
 		foreach($Results as $u) {
-			echo '<a href="' . base_url() . 'index.php/profile?id=' . $u->id . '"><img src="https://graph.facebook.com/' . $u->id . '/picture?type=large" style="height:60px;" /> ' . $u->first . ' ' . $u->last . '</a><br><hr>';
+			echo '<tr><td><a href="' . base_url() . 'index.php/profile?id=' . $u->id . '"><img src="https://graph.facebook.com/' . $u->id . '/picture?type=large" style="height:60px;" /></td><td><a href="' . base_url() . 'index.php/profile?id=' . $u->id . '">' . $u->first . ' ' . $u->last . '</a></td></tr>';
 		}
 		?>
+		</table>
 	</div>
 </div>
 <!-- /.row -->
